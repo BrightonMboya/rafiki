@@ -5,15 +5,15 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="font-sans lg:flex lg:items-center">
+    <main className="font-sans lg:flex lg:items-center lg:justify-center lg:h-screen">
       <section className="lg:grid lg:grid-cols-2">
         <div className="flex flex-col items-center pt-[40px]">
           <p className="text-6xl md:text-8xl font-medium text-white text-center lg:hidden">
             Rafiki Branding.
           </p>
-          <div className="pt-[60px]">
+          <div className="pt-[60px] lg:pt-0">
             <Image
-              src="https://res.cloudinary.com/du50lw9fp/image/upload/v1717938020/IKAZE-151_yim8vb.jpg"
+              src="/demo-pic.jpg"
               alt="Founders"
               width={650}
               height={875}
@@ -30,13 +30,13 @@ export default function Page() {
         <div className="flex flex-col items-center lg:items-start justify-center mt-[40px] text-center px-5">
           <TextGenerateEffect
             className="text-6xl md:text-8xl font-medium text-white text-center lg:text-left hidden lg:block"
-            words="Rafiki Branding"
+            words="Rafiki Branding."
           />
 
           {/* <p className="text-6xl md:text-8xl font-medium text-white text-center lg:text-left ">
             Rafiki Branding.
           </p> */}
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             className="text-[#878787] mt-6  text-lg md:text-xl lg:text-left"
             words="We are a story-led content solutions company based in Rwanda and
             Tanzania that leverages the power of compelling narratives to
@@ -44,7 +44,14 @@ export default function Page() {
             providing Creative Development, Ideation & Strategy, as well as
             production services in videos and photos.
             "
-          />
+          /> */}
+          <p className="text-[#878787] mt-6  text-lg md:text-xl lg:text-left">
+            We are a story-led content solutions company based in Rwanda and
+            Tanzania that leverages the power of compelling narratives to
+            connect with audiences on a profound level. Our renewed focus is on
+            providing Creative Development, Ideation & Strategy, as well as
+            production services in videos and photos
+          </p>
           <TextGenerateEffect
             className="text-[#878787] mt-6  text-lg md:text-xl lg:text-left"
             words=" We work with purpose-driven organizations, including brands,

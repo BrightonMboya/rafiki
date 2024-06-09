@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <img
             src="/logo.png"
             alt="logo"
-            className="w-[200px] h-[100px] object-cover"
+            className="w-[100px] h-[50px] pl-5 pt-5 object-contain"
           />
         </Link>
       </nav>
