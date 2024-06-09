@@ -1,6 +1,7 @@
 module.exports = {
   images: {
     formats: ["image/avif", "image/webp"],
+    domains: ["res.cloudinary.com"],
     remotePatterns: [
       {
         protocol: "https",
@@ -10,4 +11,5 @@ module.exports = {
       },
     ],
   },
+  transpilePackages: ["geist"],
 };
