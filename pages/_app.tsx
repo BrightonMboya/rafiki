@@ -2,17 +2,15 @@ import { GeistSans } from "geist/font/sans";
 import type { AppProps } from "next/app";
 import "../styles/index.css";
 import Link from "next/link";
+import BlurImage from "../components/BlurImage";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <nav>
+      <nav className="relative w-[200px] h-[50px] ml-5 mt-5 object-contain">
         <Link href="/">
-          <img
-            src="/logo.png"
-            alt="logo"
-            className="w-[100px] h-[50px] pl-5 pt-5 object-contain"
-          />
+          <BlurImage imageUrl="/logo.png" preload={true} rounded={false} />
+          
         </Link>
       </nav>
       <main className={`${GeistSans.variable} `}>

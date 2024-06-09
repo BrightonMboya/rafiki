@@ -2,6 +2,7 @@ import { Grid } from "../components/Grid";
 import Image from "next/image";
 import { TextGenerateEffect } from "../components/TextGenerateEffect";
 import Link from "next/link";
+import BlurImage from "../components/BlurImage";
 
 export default function Page() {
   return (
@@ -12,7 +13,14 @@ export default function Page() {
             Rafiki Branding.
           </p>
           <div className="pt-[60px] lg:pt-0">
-            <Image
+            <div className="w-[300px] h-[400px] object-cover relative rounded-md border-[1px] border-white/20 md:w-[700px] md:h-[600px] ">
+              <BlurImage
+                imageUrl="/demo-pic.jpg"
+                preload={true}
+                rounded={false}
+              />
+            </div>
+            {/* <Image
               src="/demo-pic.jpg"
               alt="Founders"
               width={650}
@@ -23,7 +31,7 @@ export default function Page() {
                   (max-width: 1536px) 33vw,
                   25vw"
               className="w-[300px] h-[400px] object-cover rounded-md border-[1px] border-white/20 md:w-[700px] md:h-[600px] "
-            />
+            /> */}
           </div>
         </div>
 
