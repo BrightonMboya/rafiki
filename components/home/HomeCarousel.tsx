@@ -2,9 +2,8 @@ import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "./Button";
 import Link from "next/link";
-import Image from "next/image";
 
-import { Card, CardContent } from "./Card";
+
 import {
   Carousel,
   CarouselContent,
