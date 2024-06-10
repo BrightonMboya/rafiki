@@ -1,15 +1,24 @@
-import { GeistSans } from "geist/font/sans";
 import type { AppProps } from "next/app";
 import "../styles/index.css";
-import Link from "next/link";
-import BlurImage from "../components/BlurImage";
 import Nav from "../components/Nav";
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-poppins",
+});
+const gillSans = localFont({
+  src: "../public/fonts/Gill_Sans.otf",
+  variable: "--font-gill",
+});
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Nav />
-      <main className={`${GeistSans.variable} font-sans`}>
+      <main className={`${poppins.className} ${gillSans.className}`}>
+        <Nav />
         <Component {...pageProps} />
       </main>
     </>

@@ -19,12 +19,10 @@ export default function Page() {
           content="https://nextjsconf-pics.vercel.app/og-image.png"
         />
       </Head>
-      <main className="font-sans lg:flex lg:items-center lg:justify-center lg:h-screen">
+      <main className="font-poppins lg:flex lg:items-center lg:justify-center lg:h-screen">
         <section className="lg:grid lg:grid-cols-2">
           <div className="flex flex-col items-center pt-[40px]">
-            <p className="text-6xl md:text-8xl font-medium text-white text-center lg:hidden">
-              Rafiki Branding.
-            </p>
+            
             <div className="pt-[60px] lg:pt-0">
               <div className="w-[300px] h-[400px] object-cover relative rounded-md border-[1px] border-white/20 md:w-[700px] md:h-[600px] ">
                 <BlurImage
@@ -49,11 +47,7 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col items-center lg:items-start justify-center mt-[40px] text-center px-5">
-            <TextGenerateEffect
-              className="text-6xl md:text-8xl font-medium text-white text-center lg:text-left hidden lg:block"
-              words="Rafiki Branding."
-            />
-
+            
             {/* <p className="text-6xl md:text-8xl font-medium text-white text-center lg:text-left ">
             Rafiki Branding.
           </p> */}

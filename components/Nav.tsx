@@ -5,10 +5,11 @@ import { useState } from "react";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center font-sans mt-5">
+    <nav className="flex justify-between items-center font-gill mt-5">
       <div className="relative w-[200px] h-[50px] ml-5 object-cover ">
         <Link href="/">
-          <BlurImage imageUrl="/logo.png" preload={true} rounded={false} />
+          {/* <BlurImage imageUrl="/logo.png" preload={true} rounded={false} /> */}
+          <img src="/logo.png" alt="logo" className="w-[200px] h-[50px]" />
         </Link>
       </div>
       <div className="">
@@ -44,18 +45,18 @@ export default function Nav() {
                 />
               </svg>
             </button>
-            <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[50px]  text-[36px] mt-[50px] text-white font-sans">
+            <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[50px]  text-[36px] mt-[50px] text-white font-gill">
               <Link href="/about" onClick={() => setIsOpen(false)}>
                 <li>About Us</li>
               </Link>
 
               <Link href="/gallery" onClick={() => setIsOpen(false)}>
-                <li>Our Portfolio</li>
+                <li>Photography</li>
               </Link>
 
-              <Link href="" onClick={() => setIsOpen(false)}>
+              {/* <Link href="" onClick={() => setIsOpen(false)}>
                 <li>Contact Us</li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
         )}
@@ -65,12 +66,12 @@ export default function Nav() {
           </Link>
 
           <Link href="/gallery">
-            <li>Our Portfolio</li>
+            <li>Photography</li>
           </Link>
 
-          <Link href="">
+          {/* <Link href="">
             <li>Contact Us</li>
-          </Link>
+          </Link> */}
         </ul>
       </div>
     </nav>

@@ -21,36 +21,36 @@ export default function HomeCarousel() {
   const pics = [
     {
       id: 1,
-      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717938802/Sauti_Sol-11_pymmc5.jpg",
-      title: "Rafiki Branding",
+      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717938780/Orientation_47_fs17wd.jpg",
+      title: "People",
       buttonLink: "/",
       caption:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot",
     },
     {
       id: 2,
-      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717938755/Hillsong-25_o9rwsa.jpg",
-      title: "About Us",
+      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717933755/IMG_4741_jrmzd4.jpg",
+      title: "Nature",
       buttonLink: "/about",
       caption:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot",
     },
     {
       id: 3,
-      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717938756/Hillsong-24_hlcqp3.jpg",
-      title: "Our Portfolio",
+      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717935127/Friday-39_gp8rqb.jpg",
+      title: "Travel",
       buttonLink: "/gallery",
       caption:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot",
     },
-    {
-      id: 4,
-      url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717938755/Hillsong-25_o9rwsa.jpg",
-      title: "Our Contact",
-      buttonLink: "",
-      caption:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot",
-    },
+    // {
+    //   id: 4,
+    //   url: "https://res.cloudinary.com/du50lw9fp/image/upload/v1717938755/Hillsong-25_o9rwsa.jpg",
+    //   title: "Our Contact",
+    //   buttonLink: "",
+    //   caption:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcot",
+    // },
   ];
 
   return (
@@ -69,15 +69,15 @@ export default function HomeCarousel() {
             <CarouselItem key={pic.id} className="">
               <div className=" h-screen relative w-screen ">
                 <BlurImage imageUrl={pic.url} preload rounded={false} />
-                <div className="top-[45%] md:top-[40%] absolute text-white font-sans z-[100] pl-5 md:pl-10">
-                  <p className="text-4xl font-semibold md:text-5xl">
+                <div className="top-[45%] md:top-[40%] absolute text-white z-[100] pl-5 md:pl-10 flex flex-col items-start">
+                  <h5 className="text-4xl uppercase md:text-8xl font-poppins font-light">
                     {pic.title}
-                  </p>
-                  <p className="text-base max-w-sm md:max-w-md text-balance pt-3 md:text-lg lg:max-w-xl">
+                  </h5>
+                  {/* <p className="text-base max-w-sm md:max-w-md text-balance pt-3 md:text-lg lg:max-w-xl">
                     {pic.caption}
-                  </p>
-                  <Link href={pic.buttonLink}>
-                    <Button className="bg-white text-black text-lg px-4 mt-5">
+                  </p> */}
+                  <Link href="/gallery">
+                    <Button className="bg-white text-black text-lg px-4 mt-2 font-poppins">
                       Learn More
                     </Button>
                   </Link>

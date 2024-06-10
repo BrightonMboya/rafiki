@@ -19,8 +19,8 @@ module.exports = {
         "taller-than-854": { raw: "(min-height: 854px)" },
       },
       fontFamily: {
-        sans: "var(--font-geist-sans)",
-        mono: "var(--font-geist-mono)",
+       poppins: "var(--font-poppins)",
+       gill: "var(--font-gill)",
       },
     },
   },

@@ -7,3 +7,11 @@
     clip-path: inset(0.6px);
   }
 }
+
+li {
+  font-family: var("--font-gill");
+}
+
+h5 {
+  font-family: var("--font-poppins");
+}
