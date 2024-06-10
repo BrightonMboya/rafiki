@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           
         </Link>
       </nav>
-      <main className={`${GeistSans.variable} `}>
+      <main className={`${GeistSans.variable} font-sans`}>
         <Component {...pageProps} />
       </main>
     </>
