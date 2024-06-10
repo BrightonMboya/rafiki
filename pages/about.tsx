@@ -26,7 +26,7 @@ export default function Page() {
             <div className="pt-[60px] lg:pt-0">
               <div className="w-[300px] h-[400px] object-cover relative rounded-md border-[1px] border-white/20 md:w-[700px] md:h-[600px] ">
                 <BlurImage
-                  imageUrl="/demo-pic.jpg"
+                  imageUrl="/evance.jpg"
                   preload={true}
                   rounded={false}
                 />
