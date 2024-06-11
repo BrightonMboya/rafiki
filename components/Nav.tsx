@@ -50,13 +50,17 @@ export default function Nav() {
               <Link href="/" onClick={() => setIsOpen(false)}>
                 <li>Home</li>
               </Link>
-              
+
               <Link href="/about" onClick={() => setIsOpen(false)}>
                 <li>About Us</li>
               </Link>
 
               <Link href="/gallery" onClick={() => setIsOpen(false)}>
                 <li>Photography</li>
+              </Link>
+
+              <Link href="/film" onClick={() => setIsOpen(false)}>
+                <li>Film</li>
               </Link>
 
               {/* <Link href="" onClick={() => setIsOpen(false)}>
@@ -75,6 +79,10 @@ export default function Nav() {
 
           <Link href="/gallery">
             <li>Photography</li>
+          </Link>
+
+          <Link href="/film">
+            <li>Film</li>
           </Link>
 
           {/* <Link href="">
