@@ -1,9 +1,21 @@
+import Head from "next/head";
 import { videos, shorts } from "../components/videos";
 
 export default function Page() {
   return (
     <main className="mt-10 ">
       <>
+        <Head>
+          <title>Film - Evance Shauri</title>
+          <meta
+            property="og:image"
+            content="https://nextjsconf-pics.vercel.app/og-image.png"
+          />
+          <meta
+            name="twitter:image"
+            content="https://nextjsconf-pics.vercel.app/og-image.png"
+          />
+        </Head>
         <section className="flex items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-[20px] lg:grid lg:grid-cols-2">
             {videos.map((video) => (

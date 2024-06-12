@@ -1,9 +1,21 @@
 import Link from "next/link";
 import { TextGenerateEffect } from "../components/TextGenerateEffect";
+import Head from "next/head";
 
 export default function Page() {
   return (
     <>
+      <Head>
+        <title>About Us</title>
+        <meta
+          property="og:image"
+          content="https://nextjsconf-pics.vercel.app/og-image.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://nextjsconf-pics.vercel.app/og-image.png"
+        />
+      </Head>
       <main className="bg-[url('/about-us.png')] bg-cover bg-center h-screen relative">
         <div className="h-screen bg-black absolute opacity-50 top-0 bottom-0 left-0 right-0" />
         <section className="z-[100] absolute left-[20px] top-[60px] md:top-[150px] md:left-[40px] lg:top-[200px]">
