@@ -8,10 +8,20 @@
   }
 }
 
+:root {
+  --swiper-navigation-color: black !important;
+  --swiper-theme-color: black !important;
+  }
+
 li {
   font-family: var("--font-gill");
 }
 
 h5 {
   font-family: var("--font-poppins");
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+color: black;
 }
