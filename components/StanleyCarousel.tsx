@@ -9,7 +9,7 @@ import 'swiper/css/grid';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Grid, Autoplay, Navigation, A11y, Pagination } from 'swiper/modules';
+import { Grid, Navigation, A11y, Pagination } from 'swiper/modules';
 import BlurImage from './BlurImage';
 
 export default function Page() {
@@ -53,11 +53,7 @@ export default function Page() {
                 pagination={{
                     clickable: true,
                 }}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                modules={[Grid, Autoplay, Navigation, A11y]}
+                modules={[Grid, Navigation, A11y]}
                 className="absolute top-0 left-0 w-full h-screen z-[-999]"
             >
                 {
