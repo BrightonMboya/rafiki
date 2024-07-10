@@ -1,9 +1,12 @@
 import Link from "next/link";
 import BlurImage from "./BlurImage";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const activeRouteClasses = "underline underline-offset-[10px]";
   return (
     <nav className="flex justify-end items-center font-gill mt-5">
       {/* <div className="relative w-[200px] h-[50px] ml-5 object-cover ">
@@ -71,18 +74,32 @@ export default function Nav() {
         )}
         <ul className="text-white md:flex text-xl gap-[30px] pr-[80px] hidden ">
           <Link href="/">
-            <li>Home</li>
+            <li className={pathname.endsWith("/") ? activeRouteClasses : ""}>
+              Home
+            </li>
           </Link>
           <Link href="/about">
-            <li>About Us</li>
+            <li
+              className={
+                pathname.startsWith("/about") ? activeRouteClasses : ""
+              }>
+              About Us
+            </li>
           </Link>
 
           <Link href="/gallery">
-            <li>Photography</li>
+            <li
+              className={
+                pathname.startsWith("/gallery") ? activeRouteClasses : ""
+              }>
+              Photography
+            </li>
           </Link>
 
           <Link href="/film">
-            <li>Film</li>
+            <li className={pathname.startsWith("/film") ? activeRouteClasses : ""}>
+              Film
+            </li>
           </Link>
 
           {/* <Link href="">

@@ -4,6 +4,8 @@ import Nav from "../components/Nav";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
+
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -17,8 +19,9 @@ const gillSans = localFont({
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <main className={`${poppins.className} ${gillSans.className}`}>
+      <main className={`${poppins.className} ${gillSans.className} relative`}>
         <Nav />
+
         <Component {...pageProps} />
       </main>
     </>

@@ -1,52 +1,80 @@
 import Head from "next/head";
-import { videos, shorts } from "../components/videos";
+import React from "react";
+import StanleyCarousel from "../components/StanleyCarousel";
+import cloudinary from "../utils/cloudinary";
+import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
+import { ImageProps } from "../utils/types";
+import { additionalInfo } from "../components/videos";
 
-export default function Page() {
+const Page = ({ images }: { images: ImageProps[] }) => {
+  console.log(images);
   return (
-    <main className="mt-10 ">
-      <>
-        <Head>
-          <title>Film - Evance Shauri</title>
-          <meta
-            property="og:image"
-            content="https://nextjsconf-pics.vercel.app/og-image.png"
-          />
-          <meta
-            name="twitter:image"
-            content="https://nextjsconf-pics.vercel.app/og-image.png"
-          />
-        </Head>
-        <section className="flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center gap-[20px] lg:grid lg:grid-cols-2">
-            {videos.map((video) => (
-              <iframe
-                width={video.width}
-                height={video.height}
-                src={video.url}
-                className={video.className}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // referrerpolicy="strict-origin-when-cross-origin"
-                // allowfullscreen
-              ></iframe>
-            ))}
-          </div>
-        </section>
-
-        <section className="flex items-center justify-center mt-[20px]">
-          <div className="flex flex-col items-center justify-center gap-[20px] md:grid md:grid-cols-2 lg:grid-cols-3">
-            {shorts.map((video) => (
-              <iframe
-                width={video.width}
-                height={video.height}
-                src={video.url}
-                // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                // referrerpolicy="strict-origin-when-cross-origin"
-                // allowfullscreen
-              ></iframe>
-            ))}
-          </div>
-        </section>
-      </>
-    </main>
+    <>
+      <Head>
+        <title>Stanley - Stanley Page</title>
+        <meta
+          property="og:image"
+          content="https://nextjsconf-pics.vercel.app/og-image.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://nextjsconf-pics.vercel.app/og-image.png"
+        />
+      </Head>
+      <StanleyCarousel images={images} />
+    </>
   );
+};
+
+export default Page;
+
+
+export async function getStaticProps() {
+  const results = await cloudinary.v2.search
+    .expression(`folder:thumbnails`)
+    .sort_by("display_name", "asc")
+    .max_results(30)
+    .execute();
+  let reducedResults = [];
+
+  let i = 0;
+  for (let result of results.resources) {
+    reducedResults.push({
+      id: i,
+      height: result.height,
+      width: result.width,
+      public_id: result.public_id,
+      format: result.format,
+      display_name: result.display_name,
+    });
+    i++;
+  }
+
+  const blurImagePromises = results.resources.map((image: ImageProps) => {
+    return getBase64ImageUrl(image);
+  });
+
+  const imagesWithBlurDataUrls = await Promise.all(blurImagePromises);
+  for (let i = 0; i < reducedResults.length; i++) {
+    reducedResults[i].blurDataUrl = imagesWithBlurDataUrls[i];
+  }
+
+  reducedResults.sort((a, b) => {
+    const img1 = parseInt(a.display_name);
+    const img2 = parseInt(b.display_name);
+    return img1 - img2;
+  });
+
+  const finalImages = reducedResults.map((image) => {
+    const moreInfo = additionalInfo.find(
+      (info) => info.display_name === image.display_name
+    );
+    return { ...image, ...moreInfo };
+  });
+
+  return {
+    props: {
+      images: finalImages,
+    },
+  };
 }

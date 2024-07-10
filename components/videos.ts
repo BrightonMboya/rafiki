@@ -115,3 +115,223 @@ export const shorts = [
     title: "BK Arena People",
   },
 ];
+
+
+export const additionalInfo = [
+  {
+    display_name: "1",
+    caption: "Happy Women’s Day!",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "2",
+    caption: "The Ocean is my home",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "3",
+    caption: "One of a kind university",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "4",
+    caption: "Let’s get lost in nature",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "5",
+    caption: "Life is just for living",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "6",
+    caption: "Wellness day at Radisson Blu Hotel",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "7",
+    caption: "Joining a community of change-makers",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "8",
+    caption: "Truly, the experience of a lifetime",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "9",
+    caption: "Happy Labour’s Day!",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "10",
+    caption: "Leveraging AI for the advancement in Africa",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "11",
+    caption: "Radisson Blu Hotel & Convention Center, Kigali",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "12",
+    caption: "Proudly African, but Globally relevant",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "13",
+    caption: "Yes we are here, we exist",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "14",
+    caption: "That’s all we want them to do: Chase their dreams",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "15",
+    caption: "Focus on your finances",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "16",
+    caption: "Brunch with a touch",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "17",
+    caption: "Kigali, are you really ready?",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "18",
+    caption: "ALUSIVE’S Grant was a game changer",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "19",
+    caption: "The nation lives because the tribe is dead",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "20",
+    caption: "Spend time with your loved ones",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "21",
+    caption: "Welcome to the African Leadership University",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "22",
+    caption: "I found you",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "23",
+    caption: "Innovation eases burdens and brightens life’s canvas",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+  {
+    display_name: "24",
+    caption: "Enjoy your staycation",
+    video: {
+      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      width: 996,
+      height: 560,
+    },
+  },
+];
