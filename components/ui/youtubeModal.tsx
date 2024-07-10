@@ -28,13 +28,13 @@ export default function YoutubeModal({
           <span className="relative z-10">View More</span>
         </button>
       </DialogTrigger>
-      <DialogContent className="">
+      <DialogContent className="p-0 overflow-hidden w-full min-h-72 bg-black/40">
         <div>
           <iframe
             width={width}
             height={height}
             src={url}
-            className={className}
+            className='w-full h-full'
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
       </DialogContent>
