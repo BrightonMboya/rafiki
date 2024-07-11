@@ -7,11 +7,10 @@ import { ImageProps } from "../utils/types";
 import { additionalInfo } from "../components/videos";
 
 const Page = ({ images }: { images: ImageProps[] }) => {
-  console.log(images);
   return (
     <>
       <Head>
-        <title>Stanley - Stanley Page</title>
+        <title>Film</title>
         <meta
           property="og:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
@@ -25,9 +24,7 @@ const Page = ({ images }: { images: ImageProps[] }) => {
     </>
   );
 };
-
 export default Page;
-
 
 export async function getStaticProps() {
   const results = await cloudinary.v2.search
