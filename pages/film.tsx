@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, {useState} from "react";
 import StanleyCarousel from "../components/StanleyCarousel";
 import cloudinary from "../utils/cloudinary";
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
@@ -8,7 +8,7 @@ import { additionalInfo } from "../components/videos";
 
 const Page = ({ images }: { images: ImageProps[] }) => {
   return (
-    <>
+    <main className="overflow-y-hidden">
       <Head>
         <title>Film</title>
         <meta
@@ -20,8 +20,9 @@ const Page = ({ images }: { images: ImageProps[] }) => {
           content="https://nextjsconf-pics.vercel.app/og-image.png"
         />
       </Head>
+     
       <StanleyCarousel images={images} />
-    </>
+    </main>
   );
 };
 export default Page;

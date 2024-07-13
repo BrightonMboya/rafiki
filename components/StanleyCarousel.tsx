@@ -12,7 +12,7 @@ import YoutubeModal from "./ui/youtubeModal";
 
 export default function Page({ images }: any) {
   const swiper = useSwiper();
-  console.log(images)
+console.log(images)
 
   return (
     <section className="absolute top-0 bottom-0 left-0 right-0 w-full h-screen z-[-999]">
@@ -58,7 +58,7 @@ export default function Page({ images }: any) {
                   25vw"
               />
 
-              <div className="absolute  group-hover:bottom-0 -bottom-[30%] transition-all duration-500 bg-gradient-to-t from-black/65 via-black/60 ease-in-out group-hover:bg-black/65 w-full h-full group-hover:h-full flex items-center justify-center">
+              <div className="absolute  group-hover:bottom-0 -bottom-[40%] transition-all duration-500 bg-gradient-to-t from-black/65 via-black/60 ease-in-out group-hover:bg-black/65 w-full h-full group-hover:h-full flex items-center justify-center">
                 <div className="py-10">
                   <p className="text-white text-2xl uppercase font-medium transition-all duration-700">
                     {img.caption}

@@ -266,70 +266,78 @@ export const additionalInfo = [
     display_name: "17",
     caption: "Kigali, are you really ready?",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/6-e4SOrqcxY",
       width: 996,
       height: 560,
     },
   },
+
   {
     display_name: "18",
     caption: "ALUSIVE’S Grant was a game changer",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/xZRRt62d4Yg",
       width: 996,
       height: 560,
     },
   },
+
   {
     display_name: "19",
     caption: "The nation lives because the tribe is dead",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/3lEQztGbUHQ",
       width: 996,
       height: 560,
     },
   },
+
   {
     display_name: "20",
     caption: "Spend time with your loved ones",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/q3rQXty5vx0",
       width: 996,
       height: 560,
     },
   },
+
   {
     display_name: "21",
     caption: "Welcome to the African Leadership University",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/irjv0QthWnI",
       width: 996,
       height: 560,
     },
   },
+
   {
     display_name: "22",
     caption: "I found you",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/c5IPcflVAMk",
       width: 996,
       height: 560,
     },
   },
+
   {
     display_name: "23",
     caption: "Innovation eases burdens and brightens life’s canvas",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/o5rwXOcsHd0",
       width: 996,
       height: 560,
     },
   },
+
+
   {
     display_name: "24",
     caption: "Enjoy your staycation",
     video: {
-      url: "https://www.youtube.com/embed/f9lr6BlVfSc",
+      url: "https://www.youtube.com/embed/njfDsq0al_4",
       width: 996,
       height: 560,
     },

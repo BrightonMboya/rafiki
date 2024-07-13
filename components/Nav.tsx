@@ -8,7 +8,7 @@ export default function Nav() {
   const pathname = usePathname();
   const activeRouteClasses = "underline underline-offset-[10px]";
   return (
-    <nav className="flex justify-end items-center font-gill mt-5">
+    <nav className="flex justify-end items-center font-gill mt-5 lg:absolute lg:top-0 lg:right-0 lg:z-[999]">
       {/* <div className="relative w-[200px] h-[50px] ml-5 object-cover ">
         <Link href="/">
           <BlurImage imageUrl="/logo.png" preload={true} rounded={false} />
