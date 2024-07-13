@@ -49,7 +49,7 @@ export default function Nav() {
                 />
               </svg>
             </button>
-            <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[50px]  text-[36px] mt-[50px] text-white font-gill">
+            <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[50px]  text-[36px] mt-[50px] text-white font-gill uppercase">
               <Link href="/" onClick={() => setIsOpen(false)}>
                 <li>Home</li>
               </Link>
@@ -72,7 +72,7 @@ export default function Nav() {
             </ul>
           </div>
         )}
-        <ul className="text-white md:flex text-xl gap-[30px] pr-[80px] hidden ">
+        <ul className="text-white md:flex text-xl gap-[30px] pr-[80px] hidden uppercase">
           <Link href="/">
             <li className={pathname.endsWith("/") ? activeRouteClasses : ""}>
               Home

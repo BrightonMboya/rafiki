@@ -12,7 +12,7 @@ import YoutubeModal from "./ui/youtubeModal";
 
 export default function Page({ images }: any) {
   const swiper = useSwiper();
-console.log(images)
+
 
   return (
     <section className="absolute top-0 bottom-0 left-0 right-0 w-full h-screen z-[-999]">
