@@ -8,7 +8,7 @@ export default function Nav() {
   const pathname = usePathname();
   const activeRouteClasses = "underline underline-offset-[10px]";
   return (
-    <nav className="flex justify-end items-center font-gill mt-5">
+    <nav className="flex justify-end items-center font-gill mt-5 lg:absolute lg:top-0 lg:right-0 lg:z-[999]">
       {/* <div className="relative w-[200px] h-[50px] ml-5 object-cover ">
         <Link href="/">
           <BlurImage imageUrl="/logo.png" preload={true} rounded={false} />
@@ -49,7 +49,7 @@ export default function Nav() {
                 />
               </svg>
             </button>
-            <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[50px]  text-[36px] mt-[50px] text-white font-gill">
+            <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[50px]  text-[36px] mt-[50px] text-white font-gill uppercase">
               <Link href="/" onClick={() => setIsOpen(false)}>
                 <li>Home</li>
               </Link>
@@ -72,7 +72,7 @@ export default function Nav() {
             </ul>
           </div>
         )}
-        <ul className="text-white md:flex text-xl gap-[30px] pr-[80px] hidden ">
+        <ul className="text-white md:flex text-xl gap-[30px] pr-[80px] hidden uppercase">
           <Link href="/">
             <li className={pathname.endsWith("/") ? activeRouteClasses : ""}>
               Home
@@ -97,7 +97,10 @@ export default function Nav() {
           </Link>
 
           <Link href="/film">
-            <li className={pathname.startsWith("/film") ? activeRouteClasses : ""}>
+            <li
+              className={
+                pathname.startsWith("/film") ? activeRouteClasses : ""
+              }>
               Film
             </li>
           </Link>

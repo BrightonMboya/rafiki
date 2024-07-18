@@ -12,7 +12,6 @@ import YoutubeModal from "./ui/youtubeModal";
 
 export default function Page({ images }: any) {
   const swiper = useSwiper();
-  console.log(images)
 
   return (
     <section className="absolute top-0 bottom-0 left-0 right-0 w-full h-screen z-[-999]">
@@ -43,25 +42,25 @@ export default function Page({ images }: any) {
         className="absolute top-0 left-0 w-full h-screen z-[-999]">
         {images.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className="text-center overflow-hidden h-full flex justify-center items-center group relative">
+            <div className="text-center h-full flex justify-center items-center group relative">
               <Image
                 alt="Rafiki Pictures"
-                className="transform brightness-90 transition will-change-auto"
+                className="transform brightness-90 transition will-change-auto md:h-full md:object-cover"
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
                 blurDataURL={img.blurDataUrl}
                 src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${img.public_id}.${img.format}`}
                 width={720}
                 height={480}
-                sizes="(max-width: 640px) 100vw,
-                  (max-width: 1280px) 50vw,
-                  (max-width: 1536px) 33vw,
-                  25vw"
+                // sizes="(max-width: 640px) 100vw,
+                //   (max-width: 1280px) 50vw,
+                //   (max-width: 1536px) 33vw,
+                //   25vw"
               />
 
-              <div className="absolute transition-all duration-500 bg-gradient-to-t from-black/35 via-black/30 group-hover:via-black/45 ease-in-out w-full h-full flex items-center justify-center">
+              <div className="absolute transition-all duration-500 bg-gradient-to-t from-black/35 via-black/30 group-hover:via-black/45 ease-in-out w-full h-full flex items-center justify-center z-[999]">
                 <div className="absolute bottom-[15%] group-hover:bottom-[25%] transition-all duration-500">
-                  <p className="text-white text-base lg:text-xl line-clamp-1 uppercase font-medium transition-all duration-700 px-6">
+                  <p className="text-white text-base lg:text-xl uppercase font-medium transition-all duration-700 px-6">
                     {img.caption}
                   </p>
                   <div className="transition-all duration-150">
@@ -78,6 +77,7 @@ export default function Page({ images }: any) {
                   </button> */}
                 </div>
               </div>
+              <div className="bg-gradient-to-t from-black/90 to-transparent w-full h-full absolute top-0 left-0 bottom-0 " />
             </div>
           </SwiperSlide>
         ))}

@@ -7,19 +7,19 @@ import { ImageProps } from "../utils/types";
 import { additionalInfo } from "../components/videos";
 
 const Page = ({ images }: { images: ImageProps[] }) => {
-  console.log(images);
+
   return (
     <>
       <Head>
-        <title>Stanley - Stanley Page</title>
-        <meta
+        <title>Film</title>
+        {/* <meta
           property="og:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
         />
         <meta
           name="twitter:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
-        />
+        /> */}
       </Head>
       <StanleyCarousel images={images} />
     </>

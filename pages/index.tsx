@@ -5,15 +5,15 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Evance Shauri</title>
-        <meta
+        <title>Home</title>
+        {/* <meta
           property="og:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
         />
         <meta
           name="twitter:image"
           content="https://nextjsconf-pics.vercel.app/og-image.png"
-        />
+        /> */}
       </Head>
       <HomeCarousel />
     </>
