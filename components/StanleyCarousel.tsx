@@ -43,10 +43,10 @@ export default function Page({ images }: any) {
         className="absolute top-0 left-0 w-full h-screen z-[-999]">
         {images.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className="text-center overflow-hidden bg-black/45 h-full flex justify-center items-center group relative">
+            <div className="text-center overflow-hidden h-full flex justify-center items-center group relative">
               <Image
                 alt="Rafiki Pictures"
-                className="transform brightness-90 transition will-change-auto group-hover:brightness-110"
+                className="transform brightness-90 transition will-change-auto"
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
                 blurDataURL={img.blurDataUrl}
@@ -59,17 +59,19 @@ export default function Page({ images }: any) {
                   25vw"
               />
 
-              <div className="absolute  group-hover:bottom-0 -bottom-[30%] transition-all duration-500 bg-gradient-to-t from-black/45  ease-in-out group-hover:bg-black/45 w-full h-full group-hover:h-full flex items-center justify-center">
-                <div className="py-10">
+              <div className="absolute transition-all duration-500 bg-gradient-to-t from-black/35 via-black/30 group-hover:via-black/45 ease-in-out w-full h-full flex items-center justify-center">
+                <div className="absolute bottom-[15%] group-hover:bottom-[25%] transition-all duration-500">
                   <p className="text-white text-base lg:text-xl line-clamp-1 uppercase font-medium transition-all duration-700 px-6">
                     {img.caption}
                   </p>
-                  <YoutubeModal
-                    width={img.video.width}
-                    height={img.video.height}
-                    className={img.video.className}
-                    url={img.video.url}
-                  />
+                  <div className="transition-all duration-150">
+                    <YoutubeModal
+                      width={img.video.width}
+                      height={img.video.height}
+                      className={img.video.className}
+                      url={img.video.url}
+                    />
+                  </div>
                   {/* <button
                     className={`relative py-2 px-8 w-full font-semibold text-xl text-center flex items-center justify-center mx-auto sm:w-fit hover:before:bg-red-600 overflow-hidden bg-white text-red-600 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-600 before:transition-all before:duration-500 hover:text-white  hover:before:left-0 hover:before:w-full translate-y-12 group-hover:translate-y-4 opacity-0 group-hover:opacity-100 delay-300 duration-500`}>
                     <span className="relative z-10">View More</span>

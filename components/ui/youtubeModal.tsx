@@ -28,7 +28,7 @@ export default function YoutubeModal({
           <span className="relative z-10 font-acumin">WATCH VIDEO</span>
         </button>
       </DialogTrigger>
-      <DialogContent className="p-0 overflow-hidden w-full min-h-72 bg-black/40">
+      <DialogContent className="p-2 md:p-0 overflow-hidden min-w-[80%] h-[80%] bg-black/40">
         <div>
           <iframe
             width={width}
