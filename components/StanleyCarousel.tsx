@@ -18,6 +18,7 @@ export default function Page({ images }: any) {
     <section className="absolute top-0 bottom-0 left-0 right-0 w-full h-screen z-[-999]">
       <Swiper
         slidesPerView={1}
+        speed={750}
         grid={{
           rows: 2,
         }}
@@ -42,7 +43,7 @@ export default function Page({ images }: any) {
         className="absolute top-0 left-0 w-full h-screen z-[-999]">
         {images.map((img, index) => (
           <SwiperSlide key={index}>
-            <div className="text-center overflow-hidden bg-black/30 h-full flex justify-center items-center group relative">
+            <div className="text-center overflow-hidden bg-black/45 h-full flex justify-center items-center group relative">
               <Image
                 alt="Rafiki Pictures"
                 className="transform brightness-90 transition will-change-auto group-hover:brightness-110"
@@ -58,9 +59,9 @@ export default function Page({ images }: any) {
                   25vw"
               />
 
-              <div className="absolute  group-hover:bottom-0 -bottom-[30%] transition-all duration-500 bg-gradient-to-t from-black/65 via-black/60 ease-in-out group-hover:bg-black/65 w-full h-full group-hover:h-full flex items-center justify-center">
+              <div className="absolute  group-hover:bottom-0 -bottom-[30%] transition-all duration-500 bg-gradient-to-t from-black/45  ease-in-out group-hover:bg-black/45 w-full h-full group-hover:h-full flex items-center justify-center">
                 <div className="py-10">
-                  <p className="text-white text-2xl uppercase font-medium transition-all duration-700">
+                  <p className="text-white text-base lg:text-xl line-clamp-1 uppercase font-medium transition-all duration-700 px-6">
                     {img.caption}
                   </p>
                   <YoutubeModal

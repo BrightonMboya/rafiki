@@ -8,6 +8,11 @@
   }
 }
 
+@font-face {
+  font-family: 'Acumin Pro';
+  src: url('../assets/fonts/Acumin-Pro-ExtraLight.ttf') format(ttf);
+}
+
 :root {
   --swiper-navigation-color: black !important;
   --swiper-theme-color: black !important;
@@ -19,6 +24,10 @@ li {
 
 h5 {
   font-family: var("--font-poppins");
+}
+
+.font-accumin{
+  font-family: 'Acumin Pro', sans-serif;
 }
 
 .swiper-button-prev,
