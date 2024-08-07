@@ -58,26 +58,27 @@ export default function Page({ images }: any) {
                 //   25vw"
               />
 
-              <div className="absolute transition-all duration-500 bg-gradient-to-t from-black/35 via-black/30 group-hover:via-black/45 ease-in-out w-full h-full flex items-center justify-center z-[999]">
-                <div className="absolute bottom-[15%] group-hover:bottom-[25%] transition-all duration-500">
-                  <p className="text-white text-base lg:text-xl uppercase font-medium transition-all duration-700 px-6">
+              <div className="absolute transition-all duration-500 bg-gradient-to-t from-black/30 to-transparent group-hover:via-black/50 group-hover:ease-in-out ease-in-out w-full h-[40%]  bottom-0 flex items-center justify-center z-[999]">
+                <div className="absolute bottom-[5%] group-hover:bottom-[15%] transition-all duration-500">
+                  {/* <p className="text-white text-base lg:text-xl uppercase font-medium transition-all duration-700 px-6">
                     {img.caption}
-                  </p>
+                  </p> */}
+                  <p
+                    className="text-white text-base lg:text-xl uppercase font-medium transition-all duration-700 px-6"
+                    dangerouslySetInnerHTML={{ __html: img.caption }}
+                  />
                   <div className="transition-all duration-150">
                     <YoutubeModal
                       width={img.video.width}
                       height={img.video.height}
                       className={img.video.className}
                       url={img.video.url}
+                      videoType={img.videoType}
                     />
                   </div>
-                  {/* <button
-                    className={`relative py-2 px-8 w-full font-semibold text-xl text-center flex items-center justify-center mx-auto sm:w-fit hover:before:bg-red-600 overflow-hidden bg-white text-red-600 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-600 before:transition-all before:duration-500 hover:text-white  hover:before:left-0 hover:before:w-full translate-y-12 group-hover:translate-y-4 opacity-0 group-hover:opacity-100 delay-300 duration-500`}>
-                    <span className="relative z-10">View More</span>
-                  </button> */}
                 </div>
               </div>
-              <div className="bg-gradient-to-t from-black/90 to-transparent w-full h-full absolute top-0 left-0 bottom-0 " />
+              <div className="bg-gradient-to-t from-black via-black/50 to-transparent w-full h-[30%] absolute left-0 bottom-0 " />
             </div>
           </SwiperSlide>
         ))}

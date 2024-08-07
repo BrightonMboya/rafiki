@@ -6,6 +6,7 @@ export const videos = [
     url: "https://www.youtube.com/embed/BduC9qUFemM",
     title: "ALU School of Business Highlight Video",
     className: "w-[390px] md:w-[700px] rounded-sm",
+    videoType: "landscape",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const videos = [
     url: "https://www.youtube.com/embed/0d0A4xH7-f4",
     title: "Seminar Highlight",
     className: "w-[390px] md:w-[700px] rounded-sm",
+    videoType: "landscape",
   },
 
   {
@@ -124,6 +126,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "landscape",
   },
   {
     display_name: "2",
@@ -133,6 +136,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "landscape",
   },
   {
     display_name: "3",
@@ -142,6 +146,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "landscape",
   },
   {
     display_name: "4",
@@ -151,6 +156,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
   {
     display_name: "5",
@@ -160,6 +166,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
   {
     display_name: "6",
@@ -196,10 +203,11 @@ export const additionalInfo = [
       width: 397,
       height: 705,
     },
+    videoType: "portrait",
   },
   {
     display_name: "10",
-    caption: "Leveraging AI for the advancement in Africa",
+    caption: "Leveraging AI<br/> for the advancement in Africa",
     video: {
       url: "https://www.youtube.com/embed/s2N3sBBvass",
       width: 996,
@@ -208,7 +216,7 @@ export const additionalInfo = [
   },
   {
     display_name: "11",
-    caption: "Radisson Blu Hotel & Convention Center, Kigali",
+    caption: "Radisson Blu Hotel <br/> & Convention Center, Kigali",
     video: {
       url: "https://www.youtube.com/embed/f9lr6BlVfSc",
       width: 996,
@@ -232,11 +240,12 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
 
   {
     display_name: "14",
-    caption: "That’s all we want them to do: Chase their dreams",
+    caption: "That’s all we want them to do:<br/> Chase their dreams",
     video: {
       url: "https://www.youtube.com/embed/I3SXfQQ-CF8",
       width: 996,
@@ -261,6 +270,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
   {
     display_name: "17",
@@ -270,6 +280,7 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
 
   {
@@ -300,11 +311,12 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
 
   {
     display_name: "21",
-    caption: "Welcome to the African Leadership University",
+    caption: "Welcome to<br/> African Leadership University",
     video: {
       url: "https://www.youtube.com/embed/irjv0QthWnI",
       width: 996,
@@ -320,11 +332,12 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
 
   {
     display_name: "23",
-    caption: "Innovation eases burdens and brightens life’s canvas",
+    caption: "Innovation eases burdens<br/> and brightens life’s canvas",
     video: {
       url: "https://www.youtube.com/embed/o5rwXOcsHd0",
       width: 996,
@@ -340,5 +353,6 @@ export const additionalInfo = [
       width: 996,
       height: 560,
     },
+    videoType: "portrait",
   },
 ];
