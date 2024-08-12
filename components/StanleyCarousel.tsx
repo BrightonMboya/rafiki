@@ -45,17 +45,17 @@ export default function Page({ images }: any) {
             <div className="text-center h-full flex justify-center items-center group relative">
               <Image
                 alt="Rafiki Pictures"
-                className="transform brightness-90 transition will-change-auto md:h-full md:object-fill"
+                className="transform brightness-90 transition will-change-auto md:h-full md:object-bottom"
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
                 blurDataURL={img.blurDataUrl}
                 src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/c_scale,w_720/${img.public_id}.${img.format}`}
                 width={720}
                 height={480}
-                // sizes="(max-width: 640px) 100vw,
-                //   (max-width: 1280px) 50vw,
-                //   (max-width: 1536px) 33vw,
-                //   25vw"
+                sizes="(max-width: 640px) 100vw,
+                  (max-width: 1280px) 50vw,
+                  (max-width: 1536px) 33vw,
+                  25vw"
               />
 
               <div className="absolute transition-all duration-500 bg-gradient-to-t from-black/30 to-transparent group-hover:via-black/50 group-hover:ease-in-out ease-in-out w-full h-[40%]  bottom-0 flex items-center justify-center z-[999]">

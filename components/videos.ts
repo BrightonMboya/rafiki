@@ -294,7 +294,7 @@ export const additionalInfo = [
   },
 
   {
-    display_name: "19",
+    display_name: "20",
     caption: "The nation lives because the tribe is dead",
     video: {
       url: "https://www.youtube.com/embed/3lEQztGbUHQ",
@@ -304,7 +304,7 @@ export const additionalInfo = [
   },
 
   {
-    display_name: "20",
+    display_name: "19",
     caption: "Spend time with your loved ones",
     video: {
       url: "https://www.youtube.com/embed/q3rQXty5vx0",
@@ -315,7 +315,7 @@ export const additionalInfo = [
   },
 
   {
-    display_name: "21",
+    display_name: "22",
     caption: "Welcome to<br/> African Leadership University",
     video: {
       url: "https://www.youtube.com/embed/irjv0QthWnI",
@@ -325,7 +325,7 @@ export const additionalInfo = [
   },
 
   {
-    display_name: "22",
+    display_name: "21",
     caption: "I found you",
     video: {
       url: "https://www.youtube.com/embed/c5IPcflVAMk",
@@ -336,7 +336,7 @@ export const additionalInfo = [
   },
 
   {
-    display_name: "23",
+    display_name: "24",
     caption: "Innovation eases burdens<br/> and brightens life’s canvas",
     video: {
       url: "https://www.youtube.com/embed/o5rwXOcsHd0",
@@ -346,7 +346,7 @@ export const additionalInfo = [
   },
 
   {
-    display_name: "24",
+    display_name: "23",
     caption: "Enjoy your staycation",
     video: {
       url: "https://www.youtube.com/embed/njfDsq0al_4",
