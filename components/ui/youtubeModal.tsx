@@ -23,7 +23,7 @@ export default function YoutubeModal({
   className,
 }: VideoProps) {
   const isPortrait = videoType === "portrait";
-  const modalWidth = isPortrait ? "w-[30%]" : "w-[80%]"; // Adjust width values as needed
+  const modalWidth = isPortrait ? "w-[400px]" : "min-w-[80%]";
   const minWidth = isPortrait ? "w-[30%]" : "w-[80%]"
   const iframeWidth = isPortrait ? 280 : width;
   const iframeHeight = isPortrait ? 500 : height;
@@ -36,7 +36,7 @@ export default function YoutubeModal({
         </button>
       </DialogTrigger>
       <DialogContent
-        className={`p-2 md:p-0 overflow-hidden ${modalWidth} min-${minWidth} h-[80%] bg-black/40`}>
+        className={`p-2 md:p-0 overflow-hidden ${modalWidth} h-[80%] bg-black/40`}>
         <div>
           <iframe
             width={iframeWidth}
@@ -49,3 +49,5 @@ export default function YoutubeModal({
     </Dialog>
   );
 }
+
+  

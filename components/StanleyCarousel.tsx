@@ -45,7 +45,7 @@ export default function Page({ images }: any) {
             <div className="text-center h-full flex justify-center items-center group relative">
               <Image
                 alt="Rafiki Pictures"
-                className="transform brightness-90 transition will-change-auto md:h-full md:object-cover"
+                className="transform brightness-90 transition will-change-auto md:h-full md:object-fill"
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
                 blurDataURL={img.blurDataUrl}
