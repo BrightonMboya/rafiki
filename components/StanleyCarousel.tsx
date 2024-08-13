@@ -106,7 +106,7 @@ const HoverableImage = ({ img }) => {
       >
         <div
           className={`absolute bottom-[5%] ${
-            isHovered ? "bottom-[17%]" : ""
+            isHovered ? "bottom-[20%]" : ""
           } transition-all duration-500`}
         >
           <p
