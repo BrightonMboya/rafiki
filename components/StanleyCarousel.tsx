@@ -80,8 +80,7 @@ const HoverableImage = ({ img }) => {
   return (
     <div
       className="text-center h-full flex justify-center items-center group relative"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      onClick={() => setIsHovered(!isHovered)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -107,7 +106,7 @@ const HoverableImage = ({ img }) => {
       >
         <div
           className={`absolute bottom-[5%] ${
-            isHovered ? "bottom-[15%]" : ""
+            isHovered ? "bottom-[20%]" : ""
           } transition-all duration-500`}
         >
           <p
