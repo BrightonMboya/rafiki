@@ -100,11 +100,11 @@ export default function Nav() {
               Rafiki
             </li> */}
             <Image
-            src="/logo.png"
-            alt="Logo"
-            width={100} 
-            height={100}
-            className="w-full h-full object-cover"
+              src="https://res.cloudinary.com/du50lw9fp/image/upload/v1745593552/logo_pv8r0l.png"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="w-full h-full object-cover"
             />
           </Link>
         </div>
