@@ -9,14 +9,14 @@
 }
 
 @font-face {
-  font-family: 'Acumin Pro';
-  src: url('../assets/fonts/Acumin-Pro-ExtraLight.ttf') format(ttf);
+  font-family: "Acumin Pro";
+  src: url("../assets/fonts/Acumin-Pro-ExtraLight.ttf") format(ttf);
 }
 
 :root {
   --swiper-navigation-color: black !important;
   --swiper-theme-color: black !important;
-  }
+}
 
 li {
   font-family: var("--font-gill");
@@ -26,11 +26,44 @@ h5 {
   font-family: var("--font-poppins");
 }
 
-.font-accumin{
-  font-family: 'Acumin Pro', sans-serif;
+.font-accumin {
+  font-family: "Acumin Pro", sans-serif;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-color: black;
+  color: black;
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.slow-zoom {
+  animation: slowZoom 4s ease-in-out forwards;
+}
+
+.zoom-static {
+  transform: scale(1.05); /* default resting state */
+}
+
+@keyframes typewriter {
+  0% {
+    opacity: 0;
+    transform: translateY(0.3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typewriter {
+  opacity: 0;
+  animation: typewriter 0.4s ease forwards;
 }

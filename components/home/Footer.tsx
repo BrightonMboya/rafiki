@@ -33,11 +33,8 @@ export default function Footer(){
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Ready to get started?
           </h2>
-          <p className="text-xl text-gray-300 mb-4">
-            Get in touch with us today
-          </p>
           <button className="bg-white text-black px-8 py-3 rounded-md font-medium hover:bg-gray-200 transition-colors mb-4">
-            Contact Us
+            Get in touch
           </button>
         </div>
 
@@ -57,9 +54,6 @@ export default function Footer(){
                 className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-                <span className="text-white font-medium text-lg">
-                  {image.category}
-                </span>
                 <div className="mt-3 bg-white/90 rounded-full p-2">
                   <Instagram className="w-6 h-6 text-black" />
                 </div>

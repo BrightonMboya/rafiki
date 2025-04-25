@@ -1,50 +1,50 @@
-"use client";
+import React, { useEffect, useRef, useState } from "react";
 
-import { cn } from "../utils/cn";
-import { motion, stagger, useAnimate } from "framer-motion";
+const AnimatedText = ({ paragraphs }) => {
+  const containerRef = useRef(null);
+  const [visible, setVisible] = useState(false);
 
-export const TextGenerateEffect = ({
-  words,
-  className,
-}: {
-  words: string;
-  className?: string;
-}) => {
-  const [scope, animate] = useAnimate();
-  const wordsArray = words.split(" ");
-
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx.toString()}
-              className=" opacity-0">
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
+  // Show animation when component is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.1 }
     );
-  };
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  // Flatten word count per paragraph to stagger timing
+  let wordOffset = 0;
 
   return (
-    <motion.div
-      onViewportEnter={() => {
-        animate(
-          "span",
-          {
-            opacity: 1,
-          },
-          {
-            duration: 1,
-            delay: stagger(0.13),
-          }
+    <div ref={containerRef} className="space-y-4">
+      {paragraphs.map((paragraph, paraIndex) => {
+        const words = paragraph.split(" ");
+        const currentOffset = wordOffset;
+        wordOffset += words.length;
+
+        return (
+          <p key={paraIndex} className="flex flex-wrap gap-2 leading-relaxed text-white max-w-sm md:max-w-lg lg:max-w-[50rem]  text-lg">
+            {words.map((word, wordIndex) => (
+              <span
+                key={wordIndex}
+                className={`inline-block ${
+                  visible ? "typewriter" : "opacity-0"
+                }`}
+                style={{
+                  animationDelay: `${(currentOffset + wordIndex) * 150}ms`,
+                }}>
+                {word}
+              </span>
+            ))}
+          </p>
         );
-      }}
-      className={cn("text-center font-medium", className)}>
-      {renderWords()}
-    </motion.div>
+      })}
+    </div>
   );
 };
+
+export default AnimatedText;
