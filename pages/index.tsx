@@ -1,21 +1,41 @@
-import Head from "next/head";
-import HomeCarousel from "../components/home/HomeCarousel";
+"use client";
+import HeroSection from "../components/home/HeroSection";
+import AboutUs from "../components/home/AboutUs";
+import Services from "../components/home/Services";
+import Footer from "../components/home/Footer";
+import { useEffect, useState } from "react";
 
-export default function Page() {
+export default function Home() {
+  const [activeSection, setActiveSection] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+          scrollPosition >= sectionTop - sectionHeight / 3 &&
+          scrollPosition < sectionTop + sectionHeight - sectionHeight / 3
+        ) {
+          setActiveSection(index);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <>
-      <Head>
-        <title>Home</title>
-        {/* <meta
-          property="og:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
-        />
-        <meta
-          name="twitter:image"
-          content="https://nextjsconf-pics.vercel.app/og-image.png"
-        /> */}
-      </Head>
-      <HomeCarousel />
-    </>
+    <main className="overflow-x-hidden scroll-smooth h-screen snap-y snap-mandatory ">
+      <HeroSection />
+      <AboutUs />
+      <Services />
+      <Footer />
+    </main>
   );
 }

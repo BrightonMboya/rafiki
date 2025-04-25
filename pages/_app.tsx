@@ -19,9 +19,8 @@ const gillSans = localFont({
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <main className={`${poppins.className} ${gillSans.className} relative`}>
-        <Nav />
-
+      <main className={`${poppins.className} ${gillSans.className} `}>
+        {/* <Nav /> */}
         <Component {...pageProps} />
       </main>
     </>
