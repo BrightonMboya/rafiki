@@ -46,7 +46,7 @@ export default function Nav() {
               />
             </svg>
           </button>
-          <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[100px] text-[36px] text-white font-gill uppercase">
+          <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[100px] text-[36px] text-white font-gill capitalize">
             <Link href="/" onClick={() => setIsOpen(false)}>
               <li>Photography</li>
             </Link>
@@ -56,7 +56,7 @@ export default function Nav() {
             </Link>
 
             <Link href="/gallery" onClick={() => setIsOpen(false)}>
-              <li>Impact</li>
+              <li>Portfolio</li>
             </Link>
 
             <Link href="/film" onClick={() => setIsOpen(false)}>
@@ -65,7 +65,7 @@ export default function Nav() {
           </ul>
         </div>
       )}
-      <div className="hidden md:flex w-full justify-between items-center px-6 py-4 text-xl text-white uppercase">
+      <div className="hidden md:flex w-full justify-between items-center px-6 py-4 text-lg text-white capitalize">
         <div className="flex gap-[30px]">
           <Link href="/gallery">
             <li
@@ -117,7 +117,7 @@ export default function Nav() {
                   ? activeRouteClasses
                   : inactiveRouteClasses
               }`}>
-              Impact
+              Portfolio
             </li>
           </Link>
           <Link href="/connect">

@@ -47,7 +47,7 @@ export default function Services() {
           ))}
         </div>
         <div className="max-w-3xl mx-auto text-center mb-6">
-          <button className="border-2 border-white px-8 py-3 rounded-md font-medium hover:bg-white hover:text-black transition-colors duration-300">
+          <button className="border-2 border-white px-8 py-3 font-medium hover:bg-white hover:text-black transition-colors duration-300">
             View Full Gallery
           </button>
         </div>

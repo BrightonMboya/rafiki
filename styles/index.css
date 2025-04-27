@@ -35,23 +35,6 @@ h5 {
   color: black;
 }
 
-@keyframes slowZoom {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-
-.slow-zoom {
-  animation: slowZoom 4s ease-in-out forwards;
-}
-
-.zoom-static {
-  transform: scale(1.05); /* default resting state */
-}
-
 @keyframes typewriter {
   0% {
     opacity: 0;

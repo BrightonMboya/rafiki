@@ -33,7 +33,7 @@ export default function Footer(){
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Ready to get started?
           </h2>
-          <button className="bg-white text-black px-8 py-3 rounded-md font-medium hover:bg-gray-200 transition-colors mb-4">
+          <button className="bg-white text-black px-8 py-3 font-medium hover:bg-gray-200 transition-colors mb-4">
             Get in touch
           </button>
         </div>
