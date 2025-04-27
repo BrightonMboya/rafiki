@@ -104,7 +104,7 @@ export default function HeroSection() {
             aria-label="Previous slide">
             ←            
           </button>
-          <span className="font-medium">
+          <span className="font-medium transition-colors inset-0 z-[50]">
             {currentSlide + 1}/{images.length}
           </span>
           <button

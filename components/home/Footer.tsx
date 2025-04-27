@@ -39,30 +39,62 @@ export default function Footer(){
         </div>
 
         {/* Instagram Gallery - Increased Height */}
-        <div className="flex-grow grid grid-cols-2 md:grid-cols-4">
+        <div className="flex-grow grid grid-cols-2 md:grid-cols-4 h-[500px] relative">
           {instagramImages.map((image, index) => (
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/with_rafiki"
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="group relative block w-full h-full overflow-hidden cursor-pointer">
+              className="group relative block overflow-hidden cursor-pointer">
               <Image
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
                 className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
-                <div className="mt-3 bg-white/90 rounded-full p-2">
-                  <Instagram className="w-6 h-6 text-black" />
-                </div>
-              </div>
+
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center"></div>
             </Link>
           ))}
+          <Link
+            href="https://www.instagram.com/with_rafiki"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-6 py-3 font-medium hover:bg-gray-200 transition-colors flex items-center gap-2 z-10">
+            @with_rafiki
+          </Link>
         </div>
 
-        {/* Copyright Footer */}
+        {/* <div className="relative flex-grow w-full pt-[25vh]">
+          <div className="grid grid-cols-2 md:grid-cols-4 w-full h-[50vh]">
+            {instagramImages.map((image, index) => (
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                key={index}
+                className="group relative block aspect-square overflow-hidden cursor-pointer">
+                <Image
+                  src={image.src || "/placeholder.svg"}
+                  alt={image.alt}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-200 transition-colors flex items-center gap-2 z-10">
+            <Instagram className="w-5 h-5" />
+            Follow on Instagram
+          </Link>
+        </div> */}
         <div className="py-4 text-center text-sm text-gray-400">
           <p>
             © {new Date().getFullYear()} Rafiki Studios. All rights reserved.

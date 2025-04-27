@@ -65,7 +65,7 @@ export default function Nav() {
           </ul>
         </div>
       )}
-      <div className="hidden md:flex w-full justify-between items-center px-6 py-4 text-lg text-white capitalize">
+      <div className="hidden md:flex w-full justify-between items-center px-11 py-12 text-lg text-white capitalize">
         <div className="flex gap-[30px]">
           <Link href="/gallery">
             <li

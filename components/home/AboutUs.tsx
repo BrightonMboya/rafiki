@@ -3,21 +3,29 @@ export default function AboutUs() {
   return (
     <section className="h-screen bg-[url('/about-us.png')] bg-cover bg-center relative overflow-y-hidden snap-start snap-always">
       <div className=" bg-black absolute opacity-50 top-0 bottom-0 left-0 right-0" />
-      <section className="z-[100] absolute left-[20px] top-[60px] md:top-[150px] md:left-[40px] lg:top-[200px] text-white">
-        <h2 className="lg:text-3xl font-bold">About</h2>
-        <p className="flex flex-wrap gap-2 leading-relaxed  max-w-sm md:max-w-lg lg:max-w-[50rem]  text-lg lg:text-xl">
-          We are a story-led content solutions company based in Rwanda and
-          Tanzania that leverages the power of compelling narratives to connect
-          with audiences on a profound level. Our renewed focus is on providing
-          Creative Development, Ideation & Strategy, as well as production
-          services in videos and photos.
+      <section className="z-[100] absolute left-[20px] top-[60px] md:top-[150px] md:left-[40px] lg:left-[60px] lg:top-[200px] text-white lg:max-w-2xl">
+        <h2 className="lg:text-3xl font-bold text-center uppercase">About</h2>
+        <p className="flex flex-wrap gap-2 leading-relaxed pt-5 ">
+          Evance is a Tanzanian-born visual artist based in East Africa with
+          over six years of experience capturing stories that move people. His
+          journey began with a simple desire to document life as it is, honestly
+          and beautifully. Over time, that passion grew into a craft rooted in
+          purpose—led storytelling, with every frame designed to stir emotion
+          and spark connection.
         </p>
-        <p className="flex flex-wrap gap-2 leading-relaxed max-w-sm md:max-w-lg lg:max-w-[50rem]  text-lg  lg:mt-10">
-          We work with purpose-driven organizations, including brands,
-          educational institutions, government departments, local authorities,
-          and NGOs. Together, we collaborate to promote equality, shed light on
-          important stories, explain complex information, and enhance
-          communication through the creation of engaging and impactful content.
+        <p className="flex flex-wrap gap-2 leading-relaxed  lg:mt-5">
+          His work blends cinematic style with documentary depth, focusing on
+          the people, places, and moments that shape communities. He has
+          collaborated with leading organizations and brands across the region,
+          including BK Arena, Radisson Blu Hotel, African Leadership University,
+          UNICEF Rwanda, IUCN Tanzania, Nyumbani Collection Camps, Mastercard
+          Foundation, and the World Health Organization. Every project opens a
+          new window into culture, community, and human
+        </p>
+        <p className="flex flex-wrap gap-2 leading-relaxed lg:mt-5">
+          Based in Kigali and working across East Africa, Evance creates stories
+          that feel true, timeless, and deeply human. His mission is simple: to
+          craft work that crosses borders and connects hearts.
         </p>
 
         <Link href="/gallery">
