@@ -11,7 +11,7 @@ export default function Nav() {
   const baseListClasses = "list-none cursor-pointer";
 
   return (
-    <nav className="font-gill lg:flex w-full z-10">
+    <nav className="font-gill lg:flex w-full z-10 font-fontspring">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden fixed right-5 top-5 z-50 ">
@@ -65,8 +65,9 @@ export default function Nav() {
           </ul>
         </div>
       )}
-      <div className="hidden md:flex w-full justify-between items-center px-11 py-12 text-lg text-white capitalize">
-        <div className="flex gap-[30px]">
+      <div className="hidden md:flex w-full justify-center items-center px-[32px] pt-[48px] text-lg text-white capitalize">
+        {/* Left links */}
+        <div className="flex gap-[48px] flex-1 justify-start">
           <Link href="/gallery">
             <li
               className={`${baseListClasses} ${
@@ -89,27 +90,22 @@ export default function Nav() {
           </Link>
         </div>
 
-        {/* Center section - Rafiki */}
-        <div className="flex justify-center">
+        {/* Center logo */}
+        <div className="flex flex-1 justify-center relative h-[40px] w-full">
           <Link href="/">
-            {/* <li
-              className={`${baseListClasses} ${
-                pathname === "/" ? activeRouteClasses : inactiveRouteClasses
-              }`}>
-
-              Rafiki
-            </li> */}
             <Image
               src="https://res.cloudinary.com/du50lw9fp/image/upload/v1745593552/logo_pv8r0l.png"
               alt="Logo"
-              width={100}
-              height={100}
-              className="w-full h-full object-cover"
+              // width={100}
+              // height={100}
+              fill
+              className="object-contain"
             />
           </Link>
         </div>
 
-        <div className="flex gap-[30px]">
+        {/* Right links */}
+        <div className="flex gap-[48px] flex-1 justify-end">
           <Link href="/impact">
             <li
               className={`${baseListClasses} ${

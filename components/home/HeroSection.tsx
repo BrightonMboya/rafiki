@@ -81,37 +81,52 @@ export default function HeroSection() {
 
       {/* Caption */}
       <div className="absolute inset-0 flex items-center justify-center z-40">
-        <h1 className="text-xl md:text-3xl font-bold text-white tracking-wider uppercase">
+        <h1 className="text-xl md:text-2xl font-medium text-white tracking-wider uppercase font-biennale">
           photography/filmmaking
         </h1>
       </div>
 
       {/* Indicator */}
-      {/* <div className="absolute bottom-8 left-0 right-0 flex justify-center items-center z-40">
-        <div className="bg-black/50 px-4 py-2 rounded-full text-white">
-          <span className="font-medium">
-            {currentSlide + 1}/{images.length}
-          </span>
-        </div>
-      </div> */}
+      
 
       {/* Carousel indicator with arrows */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center items-center ">
-        <div className=" px-4 py-2 rounded-full text-white flex items-center gap-3 lg:gap-[50px]">
+    
+      <div className="flex items-center justify-center">
+       
+        {/* Carousel controls */}
+        <div className="absolute bottom-5 gap-[60px] flex items-center justify-between px-8 z-50">
+          {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="hover:text-gray-300 transition-colors inset-0 z-[50]"
+            className="hover:scale-110 transition-transform"
             aria-label="Previous slide">
-            ←            
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 25 25"
+              className="w-8 h-8"
+              fill="#fff">
+              <path d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" />
+            </svg>
           </button>
-          <span className="font-medium transition-colors inset-0 z-[50]">
-            {currentSlide + 1}/{images.length}
-          </span>
+
+          {/* Current Slide Number */}
+          <div className="text-white text-base  font-sans gap-[20px] flex">
+            <span>{currentSlide + 1}</span> <span>/</span>
+            <span>{images.length}</span>
+          </div>
+
+          {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="hover:text-gray-300 transition-colors inset-0 z-[50]"
+            className="hover:scale-110 transition-transform"
             aria-label="Next slide">
-            →
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 25 25"
+              className="w-8 h-8 rotate-180"
+              fill="#fff">
+              <path d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" />
+            </svg>
           </button>
         </div>
       </div>

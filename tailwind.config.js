@@ -19,8 +19,10 @@ module.exports = {
         "taller-than-854": { raw: "(min-height: 854px)" },
       },
       fontFamily: {
-       poppins: "var(--font-poppins)",
-       gill: "var(--font-gill)",
+        poppins: "var(--font-poppins)",
+        gill: "var(--font-gill)",
+        biennale: "var(--font-biennale)",
+        fontspring: "var(--font-fontspring)",
       },
     },
   },

@@ -32,6 +32,7 @@ export default function Home() {
 
   return (
     <main className="overflow-x-hidden scroll-smooth h-screen snap-y snap-mandatory ">
+      
       <HeroSection />
       <AboutUs />
       <Services />

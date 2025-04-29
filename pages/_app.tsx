@@ -14,12 +14,25 @@ const poppins = Poppins({
 const gillSans = localFont({
   src: "../public/fonts/Gill_Sans.otf",
   variable: "--font-gill",
+  display: "swap"
 });
 
+const biennale = localFont({
+  src: "../public/fonts/Biennale.ttf",
+  variable: "--font-biennale",
+  display: "swap"
+})
+
+const fontSpring = localFont({
+  src: "../public/fonts/FontSpring.otf",
+  variable: "--font-fontspring",
+  display: "swap"
+})
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <main className={`${poppins.className} ${gillSans.className} `}>
+      <main
+        className={`${poppins.variable}  ${gillSans.variable} ${biennale.variable} ${fontSpring.variable} antialiased`}>
         {/* <Nav /> */}
         <Component {...pageProps} />
       </main>
