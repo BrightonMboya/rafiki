@@ -32,12 +32,12 @@ export default function AboutUs() {
     // </section>
     <section className="h-screen bg-[url('/about-us.png')] bg-cover bg-center  relative overflow-y-hidden snap-start snap-always font-fontspring">
       <div className="flex items-center h-full">
-        <div className="lg:pl-[50px] ">
-          <section className=" text-white lg:max-w-xl text-wrap font-fontspring">
+        <div className="lg:pl-[100px] text-justify ">
+          <section className=" text-white lg:max-w-xl text-wrap font-fontspring lg:w-[500px] lg:h-[497px]">
             <h2 className="lg:text-3xl font-bold text-center uppercase">
               About
             </h2>
-            <p className="gap-2 leading-relaxed pt-5  text-[14px] font-fontspring">
+            <p className="gap-2 leading-relaxed pt-5  text-[14px] font-fontspring ">
               Evance is a Tanzanian<span className="font-biennale">-</span>born
               visual artist based in East Africa with over six years of
               experience capturing stories that move people. His journey began
