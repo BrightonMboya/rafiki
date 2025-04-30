@@ -42,7 +42,7 @@ export default function FilmPage() {
       : videos.filter((video) => video.tags.includes(activeTag as string));
 
   return (
-    <main className="min-h-screen bg-black text-white px-4 md:px-8 relative">
+    <main className="min-h-screen bg-black text-white px-4 md:px-8 relative font-fontspring">
       <Nav />
       <div className="max-w-7xl mx-auto pt-20">
         <Tags
