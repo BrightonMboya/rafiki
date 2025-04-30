@@ -24,7 +24,7 @@ const biennale = localFont({
 })
 
 const fontSpring = localFont({
-  src: "../public/fonts/fontSpring.otf",
+  src: "../public/fonts/fontspring.otf",
   variable: "--font-fontspring",
   display: "swap"
 })
