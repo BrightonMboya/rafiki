@@ -10,6 +10,7 @@ import cloudinary from "../utils/cloudinary";
 import getBase64ImageUrl from "../utils/generateBlurPlaceholder";
 import type { ImageProps } from "../utils/types";
 import { useLastViewedPhoto } from "../utils/useLastViewedPhoto";
+import Nav from "../components/Nav";
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter();
@@ -31,7 +32,8 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
       <Head>
         <title>Photography</title>
       </Head>
-      <main className="mx-auto max-w-[1960px] p-4">
+      <Nav/>
+      <main className="mx-auto max-w-[1960px] p-4 lg:pt-10">
         {photoId && (
           <Modal
             images={images}
@@ -40,16 +42,17 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
             }}
           />
         )}
-        <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
+        <div
+          className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4"
+          onContextMenu={(e) => e.preventDefault()}>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
               key={id}
-              href={`/?photoId=${id}`}
-              as={`/p/${id}`}
+              href={`/gallery?photoId=${id}`}
+              // as={`/p/${id}`}
               ref={id === Number(lastViewedPhoto) ? lastViewedPhotoRef : null}
               shallow
-              className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
-            >
+              className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
               <Image
                 alt="Rafiki Pictures"
                 className="transform brightness-90 transition will-change-auto group-hover:brightness-110"
