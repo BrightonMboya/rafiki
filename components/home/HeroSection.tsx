@@ -110,7 +110,7 @@ export default function HeroSection() {
           </button>
 
           {/* Current Slide Number */}
-          <div className="text-white text-base  font-sans gap-[20px] flex">
+          <div className="text-white text-base  font-sans gap-[20px] lg:gap-[62px] flex">
             <span>{currentSlide + 1}</span> <span>/</span>
             <span>{images.length}</span>
           </div>
