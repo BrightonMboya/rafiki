@@ -70,7 +70,7 @@ export default function Footer() {
               <Link href="https://www.instagram.com/with_rafiki">
                 <div className="relative w-[120px] h-[50px] lg:w-[255px] lg:h-[112px]">
                   <Image
-                    src="/insta.png"
+                    src="https://res.cloudinary.com/du50lw9fp/image/upload/v1746262560/Insta_f0yrqk.png"
                     fill
                     alt="follow me on Instagram"
                     className="object-contain"
