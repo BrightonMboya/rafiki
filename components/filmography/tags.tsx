@@ -9,6 +9,7 @@ const tags = [
   "events",
   "documentaries",
   "lifestyle",
+  "reels"
 ];
 
 export default function Tags({activeTag, setActiveTag}) {

@@ -33,7 +33,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         <title>Photography</title>
       </Head>
       <Nav/>
-      <main className="mx-auto max-w-[1960px] p-4 lg:pt-10">
+      <main className=" max-w-[1960px] lg:pt-10">
         {photoId && (
           <Modal
             images={images}
@@ -43,7 +43,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           />
         )}
         <div
-          className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4"
+          className="columns-1 gap-4 sm:columns-2 xl:columns-4 lg:px-[60px]"
           onContextMenu={(e) => e.preventDefault()}>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link

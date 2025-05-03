@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Nav from "../Nav";
-import { ChevronLeft, ChevronRight, MoveLeft } from "lucide-react";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -80,37 +79,41 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/30 z-30" />
 
       {/* Caption */}
-      <div className="absolute inset-0 flex items-center justify-center z-40">
-        <h1 className="text-xl md:text-2xl font-medium text-white tracking-wider uppercase font-biennale">
-          photography/filmmaking
+      <div className="absolute inset-0 flex  flex-col text-white items-center justify-center z-40 uppercase">
+        <h1 className="text-xl md:text-[23px]  font-semibold tracking-wider font-biennale">
+          the way i remember the world
         </h1>
+        <p className="font-extralight pt-1 text-xl">Photography / filmmaking</p>
       </div>
 
-      {/* Indicator */}
-      
-
       {/* Carousel indicator with arrows */}
-    
+
       <div className="flex items-center justify-center">
-       
         {/* Carousel controls */}
-        <div className="absolute bottom-5 gap-[60px] flex items-center justify-between px-8 z-50">
+        <div className="absolute bottom-[25px] gap-[60px] flex items-center justify-between px-8 z-50">
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
             className="hover:scale-110 transition-transform"
             aria-label="Previous slide">
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
               className="w-8 h-8"
               fill="#fff">
               <path d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" />
-            </svg>
+            </svg> */}
+            <Image
+              src="/left-arrow.svg"
+              alt="Previous slide"
+              width={30}
+              height={30}
+              className="w-8 h-8"
+            />
           </button>
 
           {/* Current Slide Number */}
-          <div className="text-white text-base  font-sans gap-[20px] lg:gap-[62px] flex">
+          <div className="text-white text-base  font-sans gap-[20px] lg:gap-[62px] flex ">
             <span>{currentSlide + 1}</span> <span>/</span>
             <span>{images.length}</span>
           </div>
@@ -120,13 +123,20 @@ export default function HeroSection() {
             onClick={nextSlide}
             className="hover:scale-110 transition-transform"
             aria-label="Next slide">
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
               className="w-8 h-8 rotate-180"
               fill="#fff">
               <path d="M24 12.001H2.914l5.294-5.295-.707-.707L1 12.501l6.5 6.5.707-.707-5.293-5.293H24v-1z" />
-            </svg>
+            </svg> */}
+            <Image
+              src="/right-arrow.svg"
+              alt="Next slide"
+              width={30}
+              height={30}
+              className="w-8 h-8"
+            />
           </button>
         </div>
       </div>
