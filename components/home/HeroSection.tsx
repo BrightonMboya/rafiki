@@ -90,7 +90,7 @@ export default function HeroSection() {
 
       <div className="flex items-center justify-center">
         {/* Carousel controls */}
-        <div className="absolute bottom-[25px] gap-[60px] flex items-center justify-between px-8 z-50">
+        <div className="absolute bottom-[25px] gap-[48px] flex items-center justify-between px-8 z-50">
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
@@ -108,12 +108,12 @@ export default function HeroSection() {
               alt="Previous slide"
               width={30}
               height={30}
-              className="w-8 h-8"
+              className="w-6 h-6"
             />
           </button>
 
           {/* Current Slide Number */}
-          <div className="text-white text-base  font-sans gap-[20px] lg:gap-[62px] flex ">
+          <div className="text-white text-base  font-sans gap-[20px] lg:gap-[48px] flex">
             <span>{currentSlide + 1}</span> <span>/</span>
             <span>{images.length}</span>
           </div>
@@ -135,7 +135,7 @@ export default function HeroSection() {
               alt="Next slide"
               width={30}
               height={30}
-              className="w-8 h-8"
+              className="w-6 h-6"
             />
           </button>
         </div>
