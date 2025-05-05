@@ -27,13 +27,23 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
     }
   }, [photoId, lastViewedPhoto, setLastViewedPhoto]);
 
+  const tags = [
+    "all",
+    "concerts",
+    "hospitality",
+    "nature",
+    "portraits",
+    "sports",
+    "wildlife",
+  ];
+
   return (
     <>
       <Head>
         <title>Photography</title>
       </Head>
-      <Nav/>
-      <main className=" max-w-[1960px] lg:pt-10">
+      <Nav />
+      <main className=" max-w-[1960px] lg:pt-10 font-fontspring">
         {photoId && (
           <Modal
             images={images}
@@ -42,8 +52,17 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
             }}
           />
         )}
+
+        <div className="flex items-center justify-center gap-5">
+          {tags.map((tag) => (
+            <p key={tag} className="text-white capitalize cursor-pointer">
+              {tag}
+            </p>
+          ))}
+        </div>
         <div
-          className="columns-1 gap-4 sm:columns-2 xl:columns-4 lg:px-[60px]"
+          className="columns-1 sm:columns-2 xl:columns-4 gap-4 lg:px-[60px] lg:pt-10"
+          // className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4 lg:px-[60px] lg:pt-10 items-start"
           onContextMenu={(e) => e.preventDefault()}>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link

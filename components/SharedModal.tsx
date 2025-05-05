@@ -1,9 +1,4 @@
-import {
-  ArrowUturnLeftIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowUturnLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -50,12 +45,11 @@ export default function SharedModal({
         opacity: { duration: 0.2 },
       }}>
       <div
-        className="relative z-50 flex aspect-[3/2] w-full max-w-7xl items-center wide:h-full xl:taller-than-854:h-auto "
+        className="relative z-50 flex h-full w-full items-center wide:h-full px-4 "
         {...handlers}
         onContextMenu={(e) => e.preventDefault()}>
-        {/* Main image */}
         <div className="w-full overflow-hidden">
-          <div className="relative flex aspect-[3/2] items-center justify-center">
+          <div className=" flex aspect-[3/2] items-center justify-center">
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -64,7 +58,7 @@ export default function SharedModal({
                 initial="enter"
                 animate="center"
                 exit="exit"
-                className="absolute">
+                className="absolute ">
                 <Image
                   src={`https://res.cloudinary.com/${
                     process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
@@ -77,53 +71,76 @@ export default function SharedModal({
                   alt="Rafiki"
                   draggable={false}
                   onLoad={() => setLoaded(true)}
+                  // className="object-contain max-w-full max-h-[90vh] border-2"
+                  className={`max-h-[90vh] py-20 px-10 2xl:px-0 2xl:py-[110px] ${
+                    currentImage.height > currentImage.width
+                      ? "object-contain"
+                      : "object-cover"
+                  }`}
                 />
               </motion.div>
             </AnimatePresence>
+
+            <div className="flex items-center justify-center ">
+              <div className="absolute bottom-[25px] 2xl:bottom-[50px] gap-[48px] flex items-center justify-between px-8 z-[999]">
+                <div className="text-white text-base  font-sans gap-[20px] lg:gap-[48px] flex ">
+                  <span>{index + 1}</span> <span>/</span>
+                  <span>{images.length}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Buttons + bottom nav bar */}
-        <div className="absolute inset-0 mx-auto flex max-w-7xl items-center justify-center">
-          {/* Buttons */}
+        <div className="absolute inset-0 mx-auto flex px-10 items-center justify-center">
           {loaded && (
-            <div className="relative aspect-[3/2] max-h-full w-full">
+            <div className="relative aspect-[3/2] max-h-full w-full font-biennale">
               {navigation && (
                 <>
                   {index > 0 && (
                     <button
-                      className="absolute left-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
-                      style={{ transform: "translate3d(0, 0, 0)" }}
-                      onClick={() => changePhotoId(index - 1)}>
-                      <ChevronLeftIcon className="h-6 w-6" />
+                      onClick={() => changePhotoId(index - 1)}
+                      className="hover:scale-110 transition-transform absolute left-0 2xl:left-8 top-[calc(50%-16px)]"
+                      aria-label="Previous slide">
+                      <Image
+                        src="/left-arrow.svg"
+                        alt="Previous slide"
+                        width={30}
+                        height={30}
+                        className="w-6 h-6 2xl:w-8 2xl:h-8"
+                      />
                     </button>
                   )}
                   {index + 1 < images.length && (
                     <button
-                      className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
-                      style={{ transform: "translate3d(0, 0, 0)" }}
+                      className="hover:scale-110 transition-transform absolute right-0 2xl:right-8 top-[calc(50%-16px)] "
+                      aria-label="Next slide"
                       onClick={() => changePhotoId(index + 1)}>
-                      <ChevronRightIcon className="h-6 w-6" />
+                      <Image
+                        src="/right-arrow.svg"
+                        alt="Next slide"
+                        width={30}
+                        height={30}
+                        className="w-6 h-6 2xl:w-8 2xl:h-8"
+                      />
                     </button>
                   )}
                 </>
               )}
 
-              <div className="absolute top-0 left-0 flex items-center gap-2 p-3 text-white">
+              <div className="absolute top-10 right-0 flex items-center gap-2 p-3 ">
                 <button
                   onClick={() => closeModal()}
-                  className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white">
+                  className="p-2 text-white backdrop-blur-lg transition ">
                   {navigation ? (
-                    <XMarkIcon className="h-5 w-5" />
+                    <XMarkIcon className="h-6 w-6" />
                   ) : (
-                    <ArrowUturnLeftIcon className="h-5 w-5" />
+                    <ArrowUturnLeftIcon className="h-6 w-6" />
                   )}
                 </button>
               </div>
             </div>
           )}
-          {/* Bottom Nav bar */}
-          {navigation && (
+          {/* {navigation && (
             <div className="fixed inset-x-0 bottom-0 z-40 overflow-hidden bg-gradient-to-b from-black/0 to-black/60">
               <motion.div
                 initial={false}
@@ -166,7 +183,7 @@ export default function SharedModal({
                 </AnimatePresence>
               </motion.div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </MotionConfig>

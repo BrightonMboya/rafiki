@@ -74,7 +74,7 @@ export default function FilmPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-4">{video.title}</h2>
                 <p className=" mb-4">{video.description}</p>
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2">
                   {video.tags.map((tag) => (
                     <Link
                       key={tag}
@@ -83,7 +83,7 @@ export default function FilmPage() {
                       #{tag}
                     </Link>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

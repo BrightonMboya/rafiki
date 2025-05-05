@@ -53,7 +53,7 @@ export default function Services() {
         <div className="grid grid-cols-1 flex-grow w-full md:grid-cols-2 lg:mt-10 lg:gap-5">
           {portfolioImages.map((image, index) => (
             <section
-              className="relative group cursor-pointer overflow-hidden "
+              className="relative cursor-pointer overflow-hidden "
               key={index}>
               <Link href={image.pageLink}>
                 <Image
@@ -70,7 +70,7 @@ export default function Services() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   style={{ objectFit: "cover", objectPosition: "center" }}
-                  className="pt-[80px] group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  className="pt-[80px]"
                 />
 
                 <div>
