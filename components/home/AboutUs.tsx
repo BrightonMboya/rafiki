@@ -31,7 +31,7 @@ export default function AboutUs() {
     //   </section>
     // </section>
     <section className="h-screen bg-[url('/about-us.png')] bg-cover bg-center  relative overflow-y-hidden snap-start snap-always font-fontspring">
-      <div className="flex items-center h-full lg:max-w-[79rem] xl:max-w-[82rem] xl:px-0 2xl:max-w-[84rem] mx-auto">
+      <div className="flex items-center h-full about-section xl:px-0 mx-auto">
         <div className="text-justify px-8 2xl:px-0">
           <section className="text-white text-wrap font-fontspring lg:max-w-[460px] lg:mt-[8px]">
             <h2 className="lg:text-3xl font-bold lg:text-left text-center uppercase">

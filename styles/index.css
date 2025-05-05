@@ -34,3 +34,75 @@ h5 {
 .swiper-button-next {
   color: black;
 }
+
+@media (min-width: 1024px) {
+  .about-section {
+    max-width: 79rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-section {
+    max-width: 84rem;
+  }
+}
+
+@media (min-width: 1366px) {
+  .about-section {
+    max-width: 82rem;
+  }
+}
+
+@media (min-width: 1408px) {
+  .about-section {
+    max-width: 83rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .about-section {
+    max-width: 82rem;
+  }
+}
+
+@media (min-width: 1792px) {
+  .about-section {
+    max-width: 84rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about-section {
+    max-width: 86rem;
+  }
+}
+
+@media (min-width: 2048px) {
+  .about-section {
+    max-width: 88rem;
+  }
+}
+
+@media (min-width: 2176px) {
+  .about-section {
+    max-width: 92rem;
+  }
+}
+
+@media (min-width: 2304px) {
+  .about-section {
+    max-width: 96rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .about-section {
+    max-width: 96rem;
+  }
+}
+
+@media (min-width: 2816px) {
+  .about-section {
+    max-width: 116rem;
+  }
+}
