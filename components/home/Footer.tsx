@@ -39,7 +39,7 @@ export default function Footer() {
           </button>
         </div>
         <div className="">
-          <div className="flex-grow grid grid-cols-2 md:grid-cols-4 relative lg:h-[500px] 2xl:h-[calc(100vh-300px)] overflow-hidden">
+          <div className="flex-grow grid grid-cols-2 md:grid-cols-4 relative lg:h-[500px] 2xl:h-[calc(100vh-500px)] overflow-hidden lg:mt-[20px]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
               <Link href="https://www.instagram.com/with_rafiki">
                 <div className="relative w-[120px] h-[50px] lg:w-[200px] lg:h-[200px] 2xl:w-[255px] 2xl:h-[112px]">

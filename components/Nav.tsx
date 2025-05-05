@@ -11,7 +11,7 @@ export default function Nav() {
   const baseListClasses = "list-none cursor-pointer";
 
   return (
-    <nav className="font-gill lg:flex w-full z-10 font-fontspring">
+    <nav className="lg:flex w-full z-10 font-fontspring">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden fixed right-5 top-5 z-50 ">
@@ -46,7 +46,7 @@ export default function Nav() {
               />
             </svg>
           </button>
-          <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[100px] text-[36px] text-white font-gill capitalize">
+          <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[100px] text-[36px] text-white  capitalize">
             <Link href="/" onClick={() => setIsOpen(false)}>
               <li>Photography</li>
             </Link>
@@ -59,7 +59,7 @@ export default function Nav() {
               <li>Portfolio</li>
             </Link>
 
-            <Link href="/film" onClick={() => setIsOpen(false)}>
+            <Link href="/filmography" onClick={() => setIsOpen(false)}>
               <li>Connect</li>
             </Link>
           </ul>
@@ -78,10 +78,10 @@ export default function Nav() {
               Photography
             </li>
           </Link>
-          <Link href="/film">
+          <Link href="/filmography">
             <li
               className={`${baseListClasses} ${
-                pathname.startsWith("/film")
+                pathname.startsWith("/filmography")
                   ? activeRouteClasses
                   : inactiveRouteClasses
               }`}>

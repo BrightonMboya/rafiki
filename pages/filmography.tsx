@@ -9,6 +9,8 @@ import Footer from "../components/home/Footer";
 import Nav from "../components/Nav";
 import VideoModal, { videos } from "../components/filmography/VideoModal";
 import Tags from "../components/filmography/tags";
+import VideoPlayer from "../components/home/VideoPlayer";
+
 
 export default function Home() {
   const [activeTag, setActiveTag] = useState("all");
@@ -44,7 +46,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col bg-black ">
-      <section className="h-screen relative bg-black">
+      {/* <section className="h-screen relative bg-black">
         <div className="absolute inset-0 z-[50]">
           <Nav />
         </div>
@@ -64,7 +66,8 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center py-4">
           <ChevronDown className="h-8 w-8 text-white animate-bounce" />
         </div>
-      </section>
+      </section> */}
+      <VideoPlayer/>
 
       {/* Second Section - Video Gallery */}
       <section className="min-h-screen py-16 px-4 md:px-0">
