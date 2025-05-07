@@ -7,7 +7,7 @@ export default function AboutUs() {
             <h2 className="lg:text-3xl font-bold lg:text-left text-center uppercase">
               About
             </h2>
-            <p className="gap-2 tracking-tighter pt-5  text-[14px] font-fontspring ">
+            <p className="gap-2 tracking-tighter pt-5 text-[14px] font-fontspring ">
               Evance is a Tanzanian—born photographer and visual artist based in
               East Africa with over six years of experience capturing stories
               that move people. His journey began with a simple desire to
