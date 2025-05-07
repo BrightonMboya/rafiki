@@ -30,19 +30,19 @@ export default function Footer() {
     <>
       <section className="min-h-screen flex flex-col bg-[url('/portfolio-bg.png')] bg-cover bg-center text-white snap-start snap-always relative">
         {/* Call to Action Header - Reduced Height */}
-        <div className="pt-8 pb-4 text-center lg:pt-[70px]">
+        <div className="pt-8 pb-4 text-center lg:pt-[70px] 2xl:pt-[100px]">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-2 uppercase font-fontspring">
             Crafting stories starts here
           </h2>
-          <button className="bg-white text-black px-8 py-3 lg:text-[22.984px] lg:px-10 lg:mt-7 uppercase hover:bg-gray-200 transition-colors mb-4 font-fontspring font-regular">
+          <button className="bg-white text-black px-8 py-3 lg:text-[22.984px] lg:px-10 lg:mt-7 2xl:mt-10 uppercase hover:bg-gray-200 transition-colors mb-4 font-fontspring font-regular">
             Let<span className="font-biennale">'</span>s Connect
           </button>
         </div>
         <div className="">
-          <div className="flex-grow grid grid-cols-2 md:grid-cols-4 relative lg:h-[500px] 2xl:h-[calc(100vh-500px)] overflow-hidden lg:mt-[20px]">
+          <div className="flex-grow grid grid-cols-2 md:grid-cols-4 relative lg:h-[500px] 2xl:h-[calc(100vh-400px)] 2xl:mt-[40px] overflow-hidden lg:mt-[20px]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
               <Link href="https://www.instagram.com/with_rafiki">
-                <div className="relative w-[120px] h-[50px] lg:w-[200px] lg:h-[200px] 2xl:w-[255px] 2xl:h-[112px]">
+                <div className="relative w-[120px] h-[50px] lg:w-[250px] lg:h-[200px] 2xl:w-[400px] 2xl:h-[125px]">
                   <Image
                     src="https://res.cloudinary.com/du50lw9fp/image/upload/v1746262560/Insta_f0yrqk.png"
                     fill
