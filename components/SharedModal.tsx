@@ -45,7 +45,7 @@ export default function SharedModal({
         opacity: { duration: 0.2 },
       }}>
       <div
-        className="relative z-50 flex h-full w-full items-center wide:h-full px-4 "
+        className="relative z-50 flex h-full w-full items-center wide:h-full px-4"
         {...handlers}
         onContextMenu={(e) => e.preventDefault()}>
         <div className="w-full overflow-hidden">
@@ -82,7 +82,7 @@ export default function SharedModal({
             </AnimatePresence>
 
             <div className="flex items-center justify-center ">
-              <div className="absolute bottom-[25px] 2xl:bottom-[50px] gap-[48px] flex items-center justify-between px-8 z-[999]">
+              <div className="absolute bottom-[150px] lg:bottom-[25px] 2xl:bottom-[50px] gap-[48px] flex items-center justify-between px-8 z-[999]">
                 <div className="text-white text-base  font-sans gap-[20px] lg:gap-[48px] flex ">
                   <span>{index + 1}</span> <span>/</span>
                   <span>{images.length}</span>
@@ -127,7 +127,7 @@ export default function SharedModal({
                 </>
               )}
 
-              <div className="absolute top-10 right-0 flex items-center gap-2 p-3 ">
+              <div className="absolute top-[-150px] lg:top-10 right-0 flex items-center gap-2 p-3 ">
                 <button
                   onClick={() => closeModal()}
                   className="p-2 text-white backdrop-blur-lg transition ">
