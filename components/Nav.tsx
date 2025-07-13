@@ -11,7 +11,20 @@ export default function Nav() {
   const baseListClasses = "list-none cursor-pointer";
 
   return (
-    <nav className="lg:flex w-full z-10 font-fontspring">
+    <nav className="lg:flex w-full z-10 font-fontspring relative">
+      <div className="top-5 left-5 inset-0 z-50 fixed w-[100px] h-[40px] md:hidden">
+        <Link href="/">
+          <Image
+            src="https://res.cloudinary.com/du50lw9fp/image/upload/v1745593552/logo_pv8r0l.png"
+            alt="Logo"
+            // width={100}
+            // height={100}
+            fill
+            className="object-contain w-[100px] h-[40px]"
+          />
+        </Link>
+      </div>
+
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="md:hidden fixed right-5 top-5 z-50 ">
@@ -29,6 +42,7 @@ export default function Nav() {
             clipRule="evenodd"></path>
         </svg>
       </button>
+
       {isOpen && (
         <div className="fixed inset-0 z-40 overflow-y-auto bg-black md:hidden">
           <button
@@ -47,7 +61,7 @@ export default function Nav() {
             </svg>
           </button>
           <ul className="flex flex-col space-y-[20px] pl-[40px] pt-[100px] text-[36px] text-white  capitalize">
-            <Link href="/" onClick={() => setIsOpen(false)}>
+            <Link href="/gallery?tags=all" onClick={() => setIsOpen(false)}>
               <li>Photography</li>
             </Link>
 
@@ -68,7 +82,7 @@ export default function Nav() {
       <div className="hidden md:flex w-full justify-center items-center px-[60px] pt-[48px] text-lg text-white capitalize">
         {/* Left links */}
         <div className="flex gap-[48px] flex-1 justify-start">
-          <Link href="/gallery">
+          <Link href="/gallery?tags=all">
             <li
               className={`${baseListClasses} ${
                 pathname.endsWith("/gallery")
